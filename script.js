@@ -21,7 +21,7 @@ document.addEventListener("keydown", (e) => {
 function shoot() {
   const bullet = document.createElement("div");
   bullet.classList.add("bullet");
-  bullet.style.left = player.offsetLeft + 12 + "px";
+  bullet.style.left = player.offsetLeft + 28 + "px";
   bullet.style.bottom = "30px";
   game.appendChild(bullet);
   bullets.push(bullet);
@@ -57,11 +57,15 @@ function update() {
     if (top >= 570) {
       const playerLeft = player.offsetLeft;
       const enemyLeft = parseInt(enemy.style.left);
+      const enemyTop = parseInt(enemy.style.top);
+      let playerBottom = parseInt(player.style.bottom)
       if (
-        enemyLeft < playerLeft + 60 &&
-        enemyLeft + 60 > playerLeft
+        enemyLeft < playerLeft + 23 &&
+        enemyLeft + 23 > playerLeft
       ) {
         alert("Game Over! Pontuação: " + score);
+        enemy.remove()
+        enemiesToRemove.push(i)
         location.reload();
       }
     }
