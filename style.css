@@ -20,7 +20,7 @@ body {
   left: 185px;
   width: 60px;
   height: 60px;
-  background-image: url("/player.png");
+  background-image: url("./player.png");
   background-size: cover;
 }
 
@@ -28,7 +28,7 @@ body {
   position: absolute;
   width: 30px;
   height: 30px;
-  background-image: url("/enemy.png");
+  background-image: url("./enemy.png");
   background-size: cover;
 }
 
